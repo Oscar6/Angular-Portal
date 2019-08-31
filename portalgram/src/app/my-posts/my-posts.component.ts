@@ -25,10 +25,12 @@ export class MyPostsComponent implements OnInit {
         .then(data => {
           // to do
           this.notifier.display('success', 'Picture has been uploaded!');
-          console.log(data['filterUrl']);
+          // console.log(data['filterUrl']);
+          return this.myFire.handleImageUpload(data);
         })
         .catch(err => {
           this.notifier.display('error', err.message);
+          console.log(err);
         });
     }
   }
