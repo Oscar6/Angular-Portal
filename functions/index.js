@@ -15,3 +15,5 @@ exports.addToFollowing = functions.database.ref('/follow/{initiatorUid}/{interes
         let FollowingMeRef = rootRef.child('usersFollowingMe/' + interestedInFollowingUid + "/" + initiatorUid);
         return FollowingMeRef.set(true);
     });
+
+// Continue Unit testing w Angular tutorial
